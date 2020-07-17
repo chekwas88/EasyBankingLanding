@@ -1,0 +1,245 @@
+.hero{
+    display: flex;
+    background-color: $color_neutral_gray;
+    padding: 8rem;
+    color: $color_primary_blue;
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+
+
+    &__content{
+        flex: 0 0 35%;
+        @media only screen and (max-width: $bp-smallest) {
+            flex: 50%;
+            margin-top: -10rem;
+        }
+    }
+
+    &__header{
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    &__description > p{
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+    }
+}
+
+
+.app{
+    position: absolute;
+    z-index: 10;
+    height: 45%;
+    width: 65%;
+    top: -10rem;
+    right: 0;
+    @media only screen and (max-width: $bp-smallest) {
+        position: relative;
+        display: block;
+        height: 45rem;
+        width: 100%;
+     }
+   
+    &__bg{
+        
+        background-image: url('../images/bg-intro-desktop.svg');
+        height: 70%;
+        width: 80%;
+        position: absolute;
+        top: -5rem;
+        right: -15rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 20;
+        @media only screen and (min-width: 68.75em) and (max-width: 72.5em) {
+            top: -15rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+           height: 60%;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            position: relative;
+            height: 80%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            background-image: url('../images/bg-intro-mobile.svg');
+            background-size: cover;
+        }
+    }
+    &__mockups{
+        position: absolute;
+        background-image: url('../images/image-mockups.png');
+        height: 85%;
+        width: 50%;
+        z-index: 30;
+        right: -4rem;
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: contain;
+        @media only screen and (max-width: $bp-large) {
+            height: 65%;
+            width: 30%;
+        }
+        @media only screen and (min-width: 68.75em) and (max-width: 72.5em) {
+            top: -10rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            width: 50%;
+            height: 100%;
+            top: -15rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            width: 80%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+    }
+    
+    
+}
+
+.business{
+    display: flex;
+    background-color: $color_neutral_blue2;
+    padding: 8rem;
+    flex-direction: column;
+    color: $color_primary_blue;
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+
+    &__caption{
+        width: 40%;
+        margin-bottom: 8rem;
+        @media only screen and (max-width: $bp-smallest) {
+            width: 60%;
+        }
+        & > p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        & > *{
+            margin-bottom: 1rem;
+        }
+    }
+    &__grid{
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @media only screen and (max-width: $bp-smallest) {
+            flex-direction: column;
+        }
+
+    }
+    &__reasons{
+        flex: 0 0 25rem;
+        margin-top: 2rem;
+        @media only screen and (max-width: $bp-largest) {
+            flex: 0 0 22%
+        }
+        @media only screen and (max-width: $bp-medium) {
+            flex: 0 0 45%
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+       
+        & > p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        & > img {
+            margin-bottom: 4rem;
+            
+        }
+        & > * {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.articles{
+    display: flex;
+    background-color: $color_neutral_gray;
+    padding: 8rem;
+    flex-direction: column;
+    color: $color_primary_blue;
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+
+    &__container{
+        display: flex;
+        margin-top: 2rem;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        @media only screen and (max-width: $bp-smallest) {
+           flex-direction: column;
+        }
+    }
+
+
+    &__paper{
+        min-height: 30rem;
+        flex: 0 0 25rem;
+        background-color: $color_neutral_white;
+        box-shadow: 0 0 1rem rgba($color_primary_blue, .15);
+        margin-top: 2rem;
+       
+        @media only screen and (max-width: $bp-largest) {
+            flex: 0 0 22%
+        }
+        @media only screen and (max-width: $bp-medium) {
+            flex: 0 0 45%
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 15rem;
+        background-position: center;
+        background-size: cover;
+        
+        &-1{
+            background-image: url(../images/image-currency.jpg);
+        }
+        &-2{
+            background-image: url(../images/image-restaurant.jpg);
+
+        }
+        &-3{
+            background-image: url(../images/image-plane.jpg);
+
+        }
+        &-4{
+            background-image: url(../images/image-confetti.jpg);
+
+        }
+    }
+
+    &__content{
+        margin-top: 1.5rem;
+        padding: 2rem;
+        & > p {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        & > h3 {
+            margin-bottom: 1rem;;
+        }
+    }
+}
