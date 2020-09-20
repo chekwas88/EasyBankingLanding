@@ -4,8 +4,6 @@ const hamburger = document.getElementById('hamburger');
 const closebuger = document.getElementById('close');
 const navBar = document.getElementById('navbar');
 
-console.log('ham',hamburger);
-console.log('hamdiv', hamburgerDiv);
 hamburger.addEventListener('click', () => {
     console.log('clicked')
     navBar.classList.toggle('show');
